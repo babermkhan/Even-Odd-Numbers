@@ -1,0 +1,57 @@
+#mainHeading{
+    position: relative;
+    top: -566px;
+    text-align: center;
+    color: white;
+    font-family: cursive;
+}
+
+img{
+    height: 600px;
+    width: 100%;
+   
+}
+#oddEven{
+    position: relative;
+    top: -486px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+#desiredNumber{
+    padding: 0.3em;
+}
+button{
+    padding: 5px 24px 5px 24px;
+    font-size: medium;
+    font-weight: bold;
+    color: steelblue;
+    
+}
+#finalResult{
+    position: relative;
+    top: -733px;
+    text-align: center;
+    color: #15f911;
+    font-family: cursive;
+    font-size: x-large;
+}
+#explanation{
+    position: relative;
+    top: -733px;
+    text-align: center;
+    color: #11eef9;
+    font-family: cursive;
+    font-size: x-large;
+}
+body, html {
+    height: 100%;
+    }
+
+/* #resetBtn{
+   
+    position: relative;
+    top: -289px;
+    left: 610px;
+} */

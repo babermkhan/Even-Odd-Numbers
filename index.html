@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd Numbers</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <img src="./images/Board.png" alt="">
+        
+    <h1 id="mainHeading">Calculate Odd & Even Numbers</h1>
+
+    <form onsubmit="calculate(); return false;" id="oddEven">
+        <label for="desiredNumber">Desired Number</label>
+        <input type="number" min="0" required id="desiredNumber" placeholder="Enter any Number"><br><br>
+        <button type="submit">Check</button><br><br><br><br><br><br><br><br><br><br><br>
+        <button type="reset" id="resetBtn" onclick="formReset();">Reset Form</button>
+        
+    </form>
+
+    <h1 id="finalResult"></h1>
+    <h3 id="explanation"></h3>
+    <p id="calcDetail"></p>
+
+    
+    <script>
+        function calculate() {
+            let desiredNumber = document.querySelector("#desiredNumber").value;
+            
+            let calculate =  desiredNumber % 2;
+            
+            if(calculate == 0){
+                
+                document.querySelector("#finalResult").innerHTML = `${desiredNumber} is an even number`; 
+                document.querySelector("#explanation").innerHTML = `Explanation <br><br> ${desiredNumber} % 2 = ${calculate}, hence, ${desiredNumber} is an even number`; 
+                  
+            }
+            else{
+                document.querySelector("#finalResult").innerHTML = `${desiredNumber} is a odd number`;  
+                document.querySelector("#explanation").innerHTML = `Explanation <br><br> ${desiredNumber} % 2 = ${calculate}, hence, ${desiredNumber} is a odd number`;  
+            }
+        }
+        function formReset(){
+            document.querySelector("#oddEven").reset();
+            document.querySelector("#finalResult").innerHTML = '';
+            document.querySelector("#explanation").innerHTML = '';
+            document.querySelector("#calcDetail").innerHTML = '';
+        }
+    </script>
+</body>
+</html>
